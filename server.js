@@ -8,12 +8,7 @@ const userRoutes = require('./routes/UserRoutes');
 const app = express()
 const DB = process.env.DB;
 
-app.use(cors(
-    {
-        origin: "*",
-        methods:"*",
-    }
-))
+app.use(cors())
 app.use(express.json())
 
 mongoose.connect(DB,{
